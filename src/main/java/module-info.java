@@ -4,4 +4,8 @@ module PixelQuest {
     exports org.example;
 
     opens Blokken;
+
+    opens Audio;
+
+    opens Achtergronden;
 }
