@@ -3,5 +3,5 @@ module PixelQuest {
 
     exports org.example;
 
-    //opens Blokken;
+    opens Blokken;
 }
