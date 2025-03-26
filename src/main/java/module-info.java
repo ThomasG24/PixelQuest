@@ -8,4 +8,6 @@ module PixelQuest {
     opens Audio;
 
     opens Achtergronden;
+
+    opens Knoppen;
 }

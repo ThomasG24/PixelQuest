@@ -18,7 +18,7 @@ public class BeginScherm extends StaticScene {
     @Override
     public void setupScene() {
         setBackgroundAudio("Audio/MuziekBeginscherm.mp3");
-        setBackgroundImage("Achtergronden/TestAchtergrond.jpg");
+        setBackgroundImage("Achtergronden/TestAchtergrond.png");
     }
 
     @Override
@@ -32,7 +32,7 @@ public class BeginScherm extends StaticScene {
         titelText.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 80));
         addEntity(titelText);
 
-        GameKnop gameKnopLevelEen = new GameKnop("Knoppen/TestKnop", new Coordinate2D(0, 0), 1, pixelQuest);
+        GameKnop gameKnopLevelEen = new GameKnop("Knoppen/TestKnop.png", new Coordinate2D(0, 0), 1, 1, pixelQuest);
         addEntity(gameKnopLevelEen);
    }
 }

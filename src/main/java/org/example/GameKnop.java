@@ -9,15 +9,18 @@ import javafx.scene.input.MouseButton;
 public class GameKnop extends DynamicSpriteEntity implements MouseButtonPressedListener {
     private int level;
     private PixelQuest pixelQuest;
+    private int setScene;
 
-    protected GameKnop(String resource, Coordinate2D initialLocation, int level, PixelQuest pixelQuest) {
+    public GameKnop(String resource, Coordinate2D initialLocation, int level, int setScene, PixelQuest pixelQuest) {
         super(resource, initialLocation, new Size(100,100));
         this.level = level;
         this.pixelQuest = pixelQuest;
+        this.setScene = setScene;
     }
 
     @Override
     public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
-        pixelQuest.setActiveScene(1);
+        pixelQuest.setActiveScene(setScene);
+        pixelQuest.setGekozenLevel(level);
     }
 }
