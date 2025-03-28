@@ -18,7 +18,7 @@ public class BeginScherm extends StaticScene {
     @Override
     public void setupScene() {
         setBackgroundAudio("Audio/MuziekBeginscherm.mp3");
-        setBackgroundImage("Achtergronden/TestAchtergrond.png");
+        setBackgroundImage("Achtergronden/achtergrondBeginscherm.png");
     }
 
     @Override

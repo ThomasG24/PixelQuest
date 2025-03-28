@@ -12,7 +12,7 @@ public class SpelScherm extends DynamicScene {
 
     @Override
     public void setupScene() {
-        setBackgroundImage("Achtergronden/TestAchtergrond.png");
+        setBackgroundImage("Achtergronden/achtergrondBeginscherm.png");
 
     }
 
