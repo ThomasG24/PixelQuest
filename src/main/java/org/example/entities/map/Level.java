@@ -12,8 +12,12 @@ public class Level extends TileMap {
     public int[][] defineMap() {
         int[][] level;
 
-        level = new int[0][];
-        
+        level = new int[][]{
+                {0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0}
+        };
+
         return level;
     }
 }

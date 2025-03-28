@@ -10,4 +10,6 @@ module PixelQuest {
     opens Achtergronden;
 
     opens Knoppen;
+
+    opens Avatar;
 }
