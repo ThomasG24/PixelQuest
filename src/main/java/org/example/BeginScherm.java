@@ -32,7 +32,7 @@ public class BeginScherm extends StaticScene {
         titelText.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 80));
         addEntity(titelText);
 
-        GameKnop gameKnopLevelEen = new GameKnop("Knoppen/TestKnop.png", new Coordinate2D(0, 0), 1, 1, pixelQuest);
+        GameKnop gameKnopLevelEen = new GameKnop("Knoppen/TestKnop.png", new Coordinate2D(0, 0),1, pixelQuest);
         addEntity(gameKnopLevelEen);
    }
 }

@@ -5,7 +5,6 @@ import com.github.hanyaeger.api.scenes.DynamicScene;
 
 public class SpelScherm extends DynamicScene {
     private PixelQuest pixelQuest;
-    private int[][][] Levels;
 
     public SpelScherm(PixelQuest pixelQuest) {
         this.pixelQuest = pixelQuest;
@@ -19,7 +18,7 @@ public class SpelScherm extends DynamicScene {
 
     @Override
     public void setupEntities() {
-        GameKnop gameKnopLevelEen = new GameKnop("Knoppen/TestKnop.png", new Coordinate2D(0, 0), 1, 0, pixelQuest);
+        GameKnop gameKnopLevelEen = new GameKnop("Knoppen/TestKnop.png", new Coordinate2D(0, 0),0, pixelQuest);
         addEntity(gameKnopLevelEen);
     }
 }

@@ -4,7 +4,6 @@ import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.YaegerGame;
 
 public class PixelQuest extends YaegerGame {
-    private int gekozenLevel;
 
     public static void main( String[] args ) {
         launch(args);
@@ -20,13 +19,5 @@ public class PixelQuest extends YaegerGame {
     public void setupScenes() {
         addScene(0, new BeginScherm(this));
         addScene(1, new SpelScherm(this));
-    }
-
-    public int getGekozenLevel() {
-        return gekozenLevel;
-    }
-
-    public void setGekozenLevel(int gekozenLevel) {
-        this.gekozenLevel = gekozenLevel;
     }
 }
