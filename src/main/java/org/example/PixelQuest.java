@@ -19,5 +19,6 @@ public class PixelQuest extends YaegerGame {
     public void setupScenes() {
         addScene(0, new BeginScherm(this));
         addScene(1, new SpelScherm(this));
+        addScene(2, new Eindscherm(this));
     }
 }

@@ -10,8 +10,8 @@ public class GameKnop extends DynamicSpriteEntity implements MouseButtonPressedL
     private PixelQuest pixelQuest;
     private int setScene;
 
-    public GameKnop(String resource, Coordinate2D initialLocation, int setScene, PixelQuest pixelQuest) {
-        super(resource, initialLocation, new Size(100,100));
+    public GameKnop(String resource, Coordinate2D initialLocation, int setScene, PixelQuest pixelQuest, Size size) {
+        super(resource, initialLocation, size);
         this.pixelQuest = pixelQuest;
         this.setScene = setScene;
     }

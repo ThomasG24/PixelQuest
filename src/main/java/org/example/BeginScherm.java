@@ -2,6 +2,7 @@ package org.example;
 
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.impl.TextEntity;
 import com.github.hanyaeger.api.scenes.StaticScene;
 import javafx.scene.paint.Color;
@@ -24,15 +25,16 @@ public class BeginScherm extends StaticScene {
     @Override
     public void setupEntities() {
         var titelText = new TextEntity(
-                new Coordinate2D(getWidth() / 2, getHeight() / 2),
+                new Coordinate2D(getWidth() / 2, (getHeight() / 3) + 25),
                 "PixelQuest"
         );
         titelText.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         titelText.setFill(Color.BLUE);
-        titelText.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 80));
+        titelText.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 50));
         addEntity(titelText);
 
-        GameKnop gameKnopLevelEen = new GameKnop("Knoppen/TestKnop.png", new Coordinate2D(0, 0),1, pixelQuest);
-        addEntity(gameKnopLevelEen);
+        GameKnop playKnop = new GameKnop("Knoppen/PlayKnop.png", new Coordinate2D(getWidth() / 2, (getHeight() / 5) * 4),1, pixelQuest, new Size(150,150));
+        playKnop.setAnchorPoint(AnchorPoint.CENTER_CENTER);
+        addEntity(playKnop);
    }
 }
