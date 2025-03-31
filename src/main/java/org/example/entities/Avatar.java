@@ -23,7 +23,6 @@ import org.example.entities.map.blokken.Blok;
 import java.util.List;
 import java.util.Set;
 
-<<<<<<< Updated upstream
 public class Avatar extends DynamicSpriteEntity implements KeyListener, Newtonian, SceneBorderTouchingWatcher, Collided, UpdateExposer {
     private PixelQuest pixelQuest;
 
@@ -45,16 +44,6 @@ public class Avatar extends DynamicSpriteEntity implements KeyListener, Newtonia
         muntjesText.setMuntjesText(totaalAantalMuntjes);
 
         this.pixelQuest = pixelQuest;
-=======
-public class Avatar extends DynamicSpriteEntity implements KeyListener, Newtonian, SceneBorderTouchingWatcher, Collided {
-    private int springCount = 0;
-    private boolean snelVallen = false;
-
-
-    public Avatar(Coordinate2D initialLocation, Size size) {
-        super("Avatar/Avatar.png", initialLocation, size);
-        setGravityConstant(0.5);
->>>>>>> Stashed changes
     }
 
     @Override
@@ -62,58 +51,25 @@ public class Avatar extends DynamicSpriteEntity implements KeyListener, Newtonia
 
         if (pressedKeys.contains(KeyCode.LEFT)) {
             setMotion(3, 270d);
-        }else if (pressedKeys.contains(KeyCode.RIGHT)) {
-                setMotion(3, 90d);
-            }else {
-                setMotion(0, 0);
+        } else if (pressedKeys.contains(KeyCode.RIGHT)) {
+            setMotion(3, 90d);
+        } else if (pressedKeys.contains(KeyCode.UP)) {
+            setMotion(3, 180d);
+        } else if (pressedKeys.contains(KeyCode.DOWN)) {
+            setMotion(3, 0d);
         }
-
-        if (pressedKeys.contains(KeyCode.UP) && springCount < 1) {
-            springCount = 1;
-            setMotion(5, 180d);
-        }
-//        }else if (pressedKeys.contains(KeyCode.UP) && pressedKeys.contains(KeyCode.RIGHT)) {
-//                    setMotion(5, 135d);
-//                    if (pressedKeys.contains(KeyCode.UP)) {
-//                        setMotion(5, 180d);
-//                    }
-//                }
-//            }
-
-
-
-
-
-//        if (pressedKeys.contains(KeyCode.UP) && springCount < 2) {
-//            springCount++;
-//            //springen = false;
-//            if (pressedKeys.contains(KeyCode.LEFT)) {
-//                setMotion(5, 225d);
-//            }else if (pressedKeys.contains(KeyCode.RIGHT)) {
-//                setMotion(5, 135d);
-//            }else {
-//                setMotion(5, 180d);
-//            }
-//        }
-
-        if (pressedKeys.contains(KeyCode.DOWN) && springCount == 2) {
-           snelVallen = true;
-           setMotion(10, 0d);
-            }
-        }
+    }
 
     @Override
     public void notifyBoundaryTouching(SceneBorder border) {
+        setSpeed(0);
 
         switch (border) {
             case TOP:
                 setAnchorLocationY(1);
                 break;
             case BOTTOM:
-                springCount = 0;
-                snelVallen = false;
                 setAnchorLocationY(getSceneHeight() - getHeight() - 1);
-                setSpeed(0);
                 break;
             case LEFT:
                 setAnchorLocationX(1);
