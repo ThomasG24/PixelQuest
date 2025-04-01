@@ -12,9 +12,4 @@ public abstract class Vijand extends DynamicSpriteEntity implements Collider {
     }
 
     public abstract void interactie(Avatar avatar);
-
-    @Override
-    public void setCurrentFrameIndex(int index) {
-        super.setCurrentFrameIndex(index);
-    }
 }
