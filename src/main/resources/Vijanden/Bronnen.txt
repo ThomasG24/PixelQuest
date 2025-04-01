@@ -1,6 +1,6 @@
 Bronnen
 ------------
 
-Goomba.png			
-				Auteur: 
-				Datum: 
+Goomba.png			https://kenney.nl/assets/jumper-pack
+				Auteur: Kenney.nl
+				Datum: 	1-4-2025
