@@ -39,7 +39,7 @@ public class SpelScherm extends DynamicScene implements TileMapContainer {
         Avatar avatar = new Avatar(new Coordinate2D(0,getHeight() - 100), new Size(45, 45), levensText,  muntjesText, pixelQuest);
         addEntity(avatar);
 
-        Vijand Goomba = new Goomba("Vijanden/Goomba.png", new Coordinate2D(50, 200), new Size(50, 50));
+        Vijand Goomba = new Goomba(new Coordinate2D(50, 200), new Size(50, 50));
         addEntity(Goomba);
     }
 

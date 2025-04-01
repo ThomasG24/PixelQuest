@@ -8,8 +8,13 @@ import org.example.entities.Avatar;
 
 public abstract class Vijand extends DynamicSpriteEntity implements Collider {
     public Vijand(String resource, Coordinate2D initialLocation, Size size) {
-        super(resource, initialLocation, size);
+        super(resource, initialLocation, size, 1, 3);
     }
 
     public abstract void interactie(Avatar avatar);
+
+    @Override
+    public void setCurrentFrameIndex(int index) {
+        super.setCurrentFrameIndex(index);
+    }
 }

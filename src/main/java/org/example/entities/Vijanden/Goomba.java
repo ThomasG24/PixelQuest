@@ -5,8 +5,8 @@ import com.github.hanyaeger.api.Size;
 import org.example.entities.Avatar;
 
 public class Goomba extends Vijand{
-    public Goomba(String resource, Coordinate2D initialLocation, Size size) {
-        super(resource, initialLocation, size);
+    public Goomba(Coordinate2D initialLocation, Size size) {
+        super("Vijanden/Goomba.png", initialLocation, size);
     }
 
     @Override
