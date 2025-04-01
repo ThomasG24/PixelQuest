@@ -13,9 +13,9 @@ public class BreekbaarBlok extends Blok {
     public void interactie(Avatar avatar) {
         System.out.println("BreekbaarBlok interactie");
 
-        avatar.setAnchorLocation(new Coordinate2D(avatar.getVorigeX(), avatar.getVorigeY()));
-
         avatar.setSpeed(0);
+
+        avatar.setAnchorLocation(new Coordinate2D(avatar.getVorigeX(), avatar.getVorigeY()));
 
         this.remove();
     }

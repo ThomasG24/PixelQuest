@@ -13,8 +13,8 @@ public class Muur extends Blok{
     public void interactie(Avatar avatar) {
         System.out.println("Muur interactie");
 
-        avatar.setAnchorLocation(new Coordinate2D(avatar.getVorigeX(), avatar.getVorigeY()));
-
         avatar.setSpeed(0);
+
+        avatar.setAnchorLocation(new Coordinate2D(avatar.getVorigeX(), avatar.getVorigeY()));
     }
 }

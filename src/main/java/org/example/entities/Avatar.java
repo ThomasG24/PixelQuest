@@ -97,11 +97,13 @@ public class Avatar extends DynamicSpriteEntity implements KeyListener, Newtonia
                 levensText.setLevensText(totaalAantallevens);
             }
             if(collider instanceof Finish){
+                pixelQuest.setTotaalAantalMuntjes(totaalAantalMuntjes);
                 pixelQuest.setActiveScene(2);
             }
         }
 
         if(totaalAantallevens <= 0){
+            pixelQuest.setTotaalAantalMuntjes(totaalAantalMuntjes);
             pixelQuest.setActiveScene(2);
         }
     }

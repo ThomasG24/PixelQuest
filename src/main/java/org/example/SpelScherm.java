@@ -20,7 +20,8 @@ public class SpelScherm extends DynamicScene implements TileMapContainer {
 
     @Override
     public void setupScene() {
-        setBackgroundImage("Achtergronden/achtergrondBeginscherm.png");
+        setBackgroundAudio("Audio/MuziekSpelscherm.mp3");
+        setBackgroundImage("Achtergronden/SpelschermAchtergrond.png");
 
     }
 

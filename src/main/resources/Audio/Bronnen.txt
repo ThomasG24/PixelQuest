@@ -2,6 +2,10 @@ Bronnen
 ----------------------
 
 
-MuziekBeginscherm: 				https://www.youtube.com/watch?v=m9wVd26ZlLU
+MuziekBeginscherm.mp3: 				https://www.youtube.com/watch?v=m9wVd26ZlLU
 						Auteur: Jeroen Schipper
-						Datum: 17 januari 2020
+						Datum: 17-01-2020
+
+MuziekSpelscherm.mp3:				https://www.youtube.com/watch?app=desktop&v=qWCLauk9oNo&t=0s
+						Auteur: TURPAK | Background Music for Videos
+						Datum: 26-10-2020

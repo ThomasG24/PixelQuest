@@ -29,8 +29,10 @@ public class BeginScherm extends StaticScene {
                 "PixelQuest"
         );
         titelText.setAnchorPoint(AnchorPoint.CENTER_CENTER);
-        titelText.setFill(Color.BLUE);
-        titelText.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 50));
+        titelText.setFill(Color.LIGHTGREEN);
+        titelText.setStrokeColor(Color.BLACK);
+        titelText.setStrokeWidth(1);
+        titelText.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 55));
         addEntity(titelText);
 
         GameKnop playKnop = new GameKnop("Knoppen/PlayKnop.png", new Coordinate2D(getWidth() / 2, (getHeight() / 5) * 4),1, pixelQuest, new Size(150,150));
