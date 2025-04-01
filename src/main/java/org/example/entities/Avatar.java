@@ -44,6 +44,8 @@ public class Avatar extends DynamicSpriteEntity implements KeyListener, Newtonia
         muntjesText.setMuntjesText(totaalAantalMuntjes);
 
         this.pixelQuest = pixelQuest;
+
+        setGravityConstant(0.5);
     }
 
     @Override
@@ -53,10 +55,19 @@ public class Avatar extends DynamicSpriteEntity implements KeyListener, Newtonia
             setMotion(3, 270d);
         } else if (pressedKeys.contains(KeyCode.RIGHT)) {
             setMotion(3, 90d);
-        } else if (pressedKeys.contains(KeyCode.UP)) {
-            setMotion(3, 180d);
-        } else if (pressedKeys.contains(KeyCode.DOWN)) {
-            setMotion(3, 0d);
+        } else {
+            setMotion(0, 0);
+        }
+
+
+        if (pressedKeys.contains(KeyCode.UP)) {
+            if (pressedKeys.contains(KeyCode.LEFT)) {
+                setMotion(3, 225d);
+            } else if (pressedKeys.contains(KeyCode.RIGHT)) {
+                setMotion(3, 135d);
+            } else {
+                setMotion(3, 180d);
+            }
         }
     }
 
