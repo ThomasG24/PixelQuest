@@ -1,6 +1,6 @@
 Bronnen
 -------------
 
-Avatar.png				
-				Auteur: 
-				Datum: 
+Avatar.png			https://kenney.nl/assets/platformer-characters	
+				Auteur: Kenney.nl
+				Datum: 	1-4-2025
