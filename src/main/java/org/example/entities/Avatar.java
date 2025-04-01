@@ -36,7 +36,7 @@ public class Avatar extends DynamicSpriteEntity implements KeyListener, Newtonia
     private MuntjesText muntjesText;
 
     public Avatar(Coordinate2D initialLocation, Size size, LevensText levensText, MuntjesText muntjesText, PixelQuest pixelQuest) {
-        super("Avatar/Avatar.png", initialLocation, size);
+        super("Avatar/Avatar.png", initialLocation, size, 2, 2);
         this.levensText = levensText;
         this.muntjesText = muntjesText;
 
@@ -45,15 +45,17 @@ public class Avatar extends DynamicSpriteEntity implements KeyListener, Newtonia
 
         this.pixelQuest = pixelQuest;
 
-        setGravityConstant(0.5);
+        setGravityConstant(0.3);
     }
 
     @Override
     public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
 
         if (pressedKeys.contains(KeyCode.LEFT)) {
+            setCurrentFrameIndex(2);
             setMotion(3, 270d);
         } else if (pressedKeys.contains(KeyCode.RIGHT)) {
+            setCurrentFrameIndex(3);
             setMotion(3, 90d);
         } else {
             setMotion(0, 0);
@@ -62,8 +64,10 @@ public class Avatar extends DynamicSpriteEntity implements KeyListener, Newtonia
 
         if (pressedKeys.contains(KeyCode.UP)) {
             if (pressedKeys.contains(KeyCode.LEFT)) {
+                setCurrentFrameIndex(0);
                 setMotion(3, 225d);
             } else if (pressedKeys.contains(KeyCode.RIGHT)) {
+                setCurrentFrameIndex(1);
                 setMotion(3, 135d);
             } else {
                 setMotion(3, 180d);
@@ -147,5 +151,10 @@ public class Avatar extends DynamicSpriteEntity implements KeyListener, Newtonia
     public void explicitUpdate(long l) {
         vorigeX = getAnchorLocation().getX();
         vorigeY = getAnchorLocation().getY();
+    }
+
+    @Override
+    public void setCurrentFrameIndex(int index) {
+        super.setCurrentFrameIndex(index);
     }
 }
